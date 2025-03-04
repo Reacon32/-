@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { FilterChecbox, FilterChecboxProps } from './filter-checkbox';
+import { FilterCheckbox, FilterChecboxProps } from './filter-checkbox';
 import { Input } from '../ui/input';
 import { title } from 'process';
 
@@ -37,7 +37,7 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
         }
 
     const list = showAll
-        ? items.filter((item) => item.text.toLowerCase().includes(searhValue.toLowerCase()))
+        ? items.filter((item) => item.text.toLowerCase().includes(searchValue.toLowerCase()))
         : defaultItems.slice(0, limit);
 
     return (
@@ -56,7 +56,7 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
 
             <div className='flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar'>
                 {list.map((item, index) => (
-                    <FilterChecbox
+                    <FilterCheckbox
                     onCheckedChange={(ids) => console.log(ids)}
                     checked={false}
                     key={index}

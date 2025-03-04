@@ -1,4 +1,5 @@
 import { Input } from "../ui/input";
+import { CheckboxFiltersGroup } from "./checkbox-filters-group";
 
 interface Props {
     className?: string;
@@ -12,6 +13,40 @@ export const Filters: React.FC<Props> = ({ className }) => {
                 <Input type="number" placeholder="0" min={0} max={5000} defaultValue={0}/>
                 <Input type="number" min={100} max={5000} placeholder="5000"/>
             </div>
+
+            <CheckboxFiltersGroup
+                className="mt-5"
+                title="Ингредиенты"
+                limit={6}
+                defaultItems={[
+                    {
+                        text: 'Сырный соус',
+                        value: '1',
+                    },
+                    {
+                        text: 'Маццарелла',
+                        value: '2',
+                    },
+                    {
+                        text: 'Чеснок',
+                        value: '3',
+                    },
+                ]}
+                items={[
+                    {
+                        text: 'Сырный соус',
+                        value: '1',
+                    },
+                    {
+                        text: 'Моццарелла',
+                        value: '2',
+                    },
+                    {
+                        text: 'Томаты',
+                        value: '6',
+                    },
+                ]}
+            />
         </div>
     );
 }
