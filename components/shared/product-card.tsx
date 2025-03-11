@@ -1,7 +1,8 @@
-import { Link, Plus } from "lucide-react";
 import React from "react";
 import { Title } from "./title";
 import { Button } from "../ui";
+import { Plus } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     id: number;
