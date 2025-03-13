@@ -53,7 +53,7 @@ export const Filters: React.FC<Props> = ({ className }) => {
                     },
                     {
                         text: 'Томаты',
-                        value: '6',
+                        value: '3',
                     },
                 ]}
                 />
