@@ -14,7 +14,7 @@ model User {
     password String
 
     createAt DateTime @default(now())
-    updateAt DateTime @updateAt
+    updateAt DateTime @updatedAt
 }
 
 model Product {
